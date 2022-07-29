@@ -15,23 +15,10 @@ namespace HairSalon.Controllers
       _db = db;
     }
 
-    // public ActionResult Index()
-    // {
-    //   List<Stylist> model = _db.Stylists.ToList();
-    //   return View(model);
-    // }
-
     public ActionResult Index()
     {
-     HairSalonEntities entities = new HairSalonEntities();
-      return View(entities.SearchStylists(""));
-    }
-
-    [HttpPost]
-    public ActionResult Index(string stylistName)
-    {
-        HairSalonEntities entities = new HairSalonEntities();
-        return View(entities.SearchStylists(styleName));
+      List<Stylist> model = _db.Stylists.ToList();
+      return View(model);
     }
 
     public ActionResult Create()
@@ -80,6 +67,19 @@ namespace HairSalon.Controllers
       _db.Stylists.Remove(thisStylist);
       _db.SaveChanges();
       return RedirectToAction("Index");
+    }
+
+    [HttpGet]
+    public ActionResult ShowSearch()
+    {
+      return View();
+    }
+
+    [HttpPost]
+    public ActionResult ShowSearch(string searchName)
+    {
+      List<Client> model = _db.Clients.Where(p => p.Name.ToLower());
+      return View("Idex", model);
     }
   }
 }
