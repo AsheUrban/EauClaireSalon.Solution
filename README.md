@@ -7,6 +7,8 @@
 ## Technologies Used
 
 * _C#_
+* _CSHTML_
+* _CSS_
 * _Entity Framework_
 * _SQL Database_
 * _dotnet_
@@ -16,10 +18,10 @@
 
 _You've been referred by Pierre to his friend Claire who is the owner of a hair salon called Eau Claire's Salon. She has contracted you out to create an MVC web application to help her manage her employees (stylists) and their clients. Claire should be able to add a list of stylists working at the salon, and for each stylist, add clients who see that stylist. The stylists have specific specialties, so each client can only see (belong to) a single stylist._
 
-* _list of all stylists._
-* _list of all clients that belong to that stylist._
-* _add new stylists to our system when they are hired._
-* _add new clients to a specific stylist. I should not be able to add a client if no stylists have been added._
+* _List of all stylists._
+* _List of all clients that belong to that stylist._
+* _Add new stylists to our system when they are hired._
+* _Add new clients to a specific stylist. I should not be able to add a client if no stylists have been added._
 
 _Here's the challenge:_ build a C# web application to help Eau Claire manage stylists and clients.
 
@@ -36,9 +38,9 @@ _Main Project Folder:_ HairSalon
 
 ## Setup/Installation Requirements
 
-* _clone or download responsitory to your local._
-* _cd into HairSalon and run dotnet restore, dotnet build, and dotnet run to run web application._
-* _touch appsettings.json and add the following configuration:_
+* _Clone or download responsitory to your local._
+* _Cd into HairSalon and run dotnet restore, dotnet build, and dotnet run to run web application._
+* _Touch appsettings.json and add the following configuration:_
 
 {
   "ConnectionStrings": {
