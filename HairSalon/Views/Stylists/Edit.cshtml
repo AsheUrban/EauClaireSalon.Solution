@@ -1,24 +1,18 @@
 @{
   Layout = "_Layout";
 }
-
 @model HairSalon.Models.Stylist
-
 <h2>EDIT STYLIST |  @Html.DisplayFor(model => model.Name)</h1>
 <hr />
 @using (Html.BeginForm())
 {
   <span> | </span> @Html.HiddenFor(model => model.StylistId) <span> | </span> 
-
   @Html.LabelFor(model => model.Name) <span> | </span> 
   @Html.EditorFor(model => model.Name) <span> | </span> 
-
   @Html.LabelFor(model => model.Specialty) <span> | </span> 
   @Html.EditorFor(model => model.Specialty) <span> | </span> 
-
     <input type="submit" value="Save" />
 <hr />
-
 }
 <p class="fancyBtn">@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId })</p>
 <p class="fancyBtn">@Html.ActionLink("Back to Stylists", "Index")</p>

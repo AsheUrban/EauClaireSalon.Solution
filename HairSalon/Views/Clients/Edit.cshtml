@@ -1,31 +1,24 @@
 @{
   Layout = "_Layout";
 }
-
 @model HairSalon.Models.Client
-
 <h2>EDIT CLIENT |  @Html.DisplayFor(model => model.Name)</h2>
 <hr />
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.ClientId)
-
   <span> | </span> @Html.LabelFor(model => model.Name) <span> | </span> 
   @Html.TextBoxFor(model => model.Name) <span> | </span> 
-
   @Html.LabelFor(model => model.ContactInfo) <span> | </span> 
   @Html.EditorFor(model => model.ContactInfo) <span> | </span> 
-
   @Html.LabelFor(model => model.Stylist) <span> | </span> 
   @Html.DropDownList("StylistId") <span> | </span> 
   <br>
- <span> | </span> @Html.LabelFor(model => model.DateOfLastApp) <span> | </span>
+  <span> | </span> @Html.LabelFor(model => model.DateOfLastApp) <span> | </span>
   @Html.TextBoxFor(model => model.DateOfLastApp) <span> | </span>
-
   @Html.LabelFor(model => model.Notes) <span> | </span>
   @Html.TextBoxFor(model => model.Notes) <span> | </span>
-
-    <input type="submit" value="Save" />
+  <input type="submit" value="Save" />
 <hr />
-<p class="fancyBtn">@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })</p>
+  <p class="fancyBtn">@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })</p>
 }

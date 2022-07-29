@@ -1,25 +1,20 @@
 @{
   Layout = "_Layout";
 }
-
 @model HairSalon.Models.Client
-
 <h2>ADD A CLIENT</h2>
 <hr />
 @using (Html.BeginForm())
 {
   <span> | </span> @Html.LabelFor(model => model.Name) <span> | </span> 
   @Html.TextBoxFor(model => model.Name) <span> | </span> 
-
   @Html.LabelFor(model => model.ContactInfo) <span> | </span> 
   @Html.EditorFor(model => model.ContactInfo) <span> | </span> 
-
   @Html.LabelFor(model => model.Stylist) <span> | </span> 
   @Html.DropDownList("StylistId") <span> | </span> 
   <br>
- <span> | </span> @Html.LabelFor(model => model.DateOfLastApp) <span> | </span>
+  <span> | </span> @Html.LabelFor(model => model.DateOfLastApp) <span> | </span>
   @Html.TextBoxFor(model => model.DateOfLastApp) <span> | </span>
-
   @Html.LabelFor(model => model.Notes) <span> | </span>
   @Html.TextBoxFor(model => model.Notes) <span> | </span>
 <hr />
