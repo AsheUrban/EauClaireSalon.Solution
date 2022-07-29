@@ -23,7 +23,7 @@ div#header {
 }
 
 body {
-  background-color: rgb(250, 242, 226);
+  background-image: url("/img/hair-tools-being-held-up-by 6 hands.jpg");
   font-size: 14px;
   font-family: 'Courier New', Courier, monospace;
   color: rgb(23, 22, 22);
@@ -64,7 +64,8 @@ a:active{
 }
 
 .container {
-  background-color: aliceblue;
+  background-color: whitesmoke;
+  border: 1px solid rgb(6, 46, 46);
   margin-top: 200px;
   margin-bottom: 200px;
   padding: 100px;
@@ -73,7 +74,7 @@ a:active{
 }
 
 .card {
-  background-color: aliceblue;
+  background-color: whitesmoke;
   margin-top: 25px;
   margin-bottom: 25px;
   padding: 25px;
