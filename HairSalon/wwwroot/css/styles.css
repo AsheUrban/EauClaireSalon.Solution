@@ -6,7 +6,7 @@ div#footer {
   left:0px;
   width:100%;
   color:#CCC;
-  background:rgb(19, 0, 36);
+  background:rgb(6, 46, 46);
   padding:8px;
   text-align: center;
 }
@@ -17,47 +17,28 @@ div#header {
   left:0px;
   width:100%;
   color:#CCC;
-  background:rgb(19, 0, 36);
+  background-color: rgb(6, 46, 46);
   padding:8px;
   text-align: center;
 }
 
-.container {
-  margin-top: 200px;
-  margin-bottom: 200px;
-  padding: 100px;
-  background-color: white;
-  height: 100%;
-  border-radius: 1rem;
-}
-
-.card {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  padding: 25px;
-  border: 0px;
-}
-
-.fancyBtn {
-  background-color: rgb(117, 73, 156);
-  color: white;
-  padding: 5px;
-  border-radius: 1rem;
-  width: 200px;
-  text-align: center;
-  font-weight: bolder;
+body {
+  background-color: rgb(250, 242, 226);
+  font-size: 14px;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(23, 22, 22);
 }
 
 h1 {
   font-size: 48px;
   font-family: 'Fjalla One', sans-serif;
-  color: rgb(210, 163, 248);;
+  color: rgb(255, 159, 175);
 }
 
 h2 {
   font-size: 36px;
   font-family: 'Fjalla One', sans-serif;
-  color:rgb(19, 0, 36);
+  color:rgb(6, 46, 46);
 }
 
 h3 {
@@ -67,40 +48,61 @@ h3 {
 }
 
 a:link {
-  color: rgb(117, 73, 156);
+  color:  rgb(251, 134, 154);
 }
 
 a:visited {
-  color: rgb(210, 163, 248);
+  color:  rgb(251, 134, 154);
 }
 
 a:hover {
-  color: rgb(117, 73, 156);
+  color:  rgb(255, 159, 175);
 }
 
 a:active{
-  color: rgb(117, 73, 156);
+  color:  rgb(251, 134, 154);
+}
+
+.container {
+  background-color: aliceblue;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  padding: 100px;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.card {
+  background-color: aliceblue;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 25px;
+  border: 0px;
+}
+
+.fancyBtn {
+  background-color:  rgb(255, 159, 175);
+  color: white;
+  padding: 5px;
+  border-radius: 1rem;
+  width: 200px;
+  text-align: center;
+  font-weight: bolder;
 }
 
 .fancyBtn a:link {
-  color: rgb(210, 163, 248);
+  color: white;
 }
 
 .fancyBtn a:visited {
-  color: rgb(210, 163, 248);
+  color:white;
 }
 
 .fancyBtn a:hover {
-  color: rgb(210, 163, 248);
+  color: white;
 }
 
-.fancyBtn a:active{
-  color: rgb(210, 163, 248);
+.fancyBtn a:active {
+  color: white;
 }
 
-body {
-  background-color: rgb(250, 242, 226);
-  font-size: 14px;
-  font-family: 'Courier New', Courier, monospace;
-  color: rgb(19, 0, 36);
-}
