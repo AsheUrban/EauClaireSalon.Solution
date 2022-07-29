@@ -52,6 +52,7 @@ _NOTE:_ [first_last] should be replaced with your own database name and [passwor
 
 * _Currently all properties aside from id are being pulled in as strings. Ideally, Date would use a date type and contact information would specifically be changed to phone number also with appropriate corresponding type._
 * _There is a test branch called searchfunction that has WIP regarding a search function._
+* _Incomplete commit history. first repository was deleted and project restarted around 9:30am._
 
 ## License
 
