@@ -21,17 +21,17 @@ namespace HairSalon.Controllers
     //   return View(model);
     // }
 
-    public async HairSalon<IActionResult> Index(string id)
+    public ActionResult Index()
     {
-        var stylist = from s in HairSalonContext
-                    select s;
+     HairSalonEntities entities = new HairSalonEntities();
+      return View(entities.SearchStylists(""));
+    }
 
-        if (!String.IsNullOrEmpty(id))
-        {
-            movies = movies.Where(s => s.Title.Contains(id));
-        }
-
-        return View(await stylists.ToListAsync());
+    [HttpPost]
+    public ActionResult Index(string stylistName)
+    {
+        HairSalonEntities entities = new HairSalonEntities();
+        return View(entities.SearchStylists(styleName));
     }
 
     public ActionResult Create()
