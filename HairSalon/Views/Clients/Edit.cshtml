@@ -18,6 +18,12 @@
 
   @Html.LabelFor(model => model.Stylist) <span> | </span> 
   @Html.DropDownList("StylistId") <span> | </span> 
+  <br>
+ <span> | </span> @Html.LabelFor(model => model.DateOfLastApp) <span> | </span>
+  @Html.TextBoxFor(model => model.DateOfLastApp) <span> | </span>
+
+  @Html.LabelFor(model => model.Notes) <span> | </span>
+  @Html.TextBoxFor(model => model.Notes) <span> | </span>
 
     <input type="submit" value="Save" />
 <hr />
