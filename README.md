@@ -36,8 +36,8 @@ _Main Project Folder:_ HairSalon
 
 ## Setup/Installation Requirements
 
-* _clone or download responsitory to your local_
-* _cd into HairSalon and run dotnet restore, dotnet build, and dotnet run to run web application_
+* _clone or download responsitory to your local._
+* _cd into HairSalon and run dotnet restore, dotnet build, and dotnet run to run web application._
 * _touch appsettings.json and add the following configuration:_
 
 {
@@ -50,7 +50,8 @@ _NOTE:_ [first_last] should be replaced with your own database name and [passwor
 
 ## Known Bugs
 
-* _None_
+* _Currently all properties aside from id are being pulled in as strings. Ideally, Date would use a date type and contact information would specifically be changed to phone number also with appropriate corresponding type._
+* _There is a test branch called searchfunction that has WIP regarding a search function._
 
 ## License
 
