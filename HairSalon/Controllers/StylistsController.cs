@@ -15,10 +15,23 @@ namespace HairSalon.Controllers
       _db = db;
     }
 
-    public ActionResult Index()
+    // public ActionResult Index()
+    // {
+    //   List<Stylist> model = _db.Stylists.ToList();
+    //   return View(model);
+    // }
+
+    public async HairSalon<IActionResult> Index(string id)
     {
-      List<Stylist> model = _db.Stylists.ToList();
-      return View(model);
+        var stylist = from s in HairSalonContext
+                    select s;
+
+        if (!String.IsNullOrEmpty(id))
+        {
+            movies = movies.Where(s => s.Title.Contains(id));
+        }
+
+        return View(await stylists.ToListAsync());
     }
 
     public ActionResult Create()
