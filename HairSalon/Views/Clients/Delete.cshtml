@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Client
+
+<h1>DELETE CLIENT?</h1>
+<hr/>
+@Html.DisplayFor(model => model.Name)
+@Html.DisplayFor(model => model.ContactInfo)
+<hr/>
+@using (Html.BeginForm())
+{
+  <input type="submit" value="Delete" />
+}
