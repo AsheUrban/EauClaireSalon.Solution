@@ -10,9 +10,9 @@
 <p><strong>@Html.DisplayFor(model => model.Name)'s Clients:</strong></p>
 <hr />
 
-@foreach (Client client in Model.Clients)
+@foreach (var join in Model.JoinEntities)
 {
-  <li>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientId })</li>
+  <li>@join.Client.Name</li>
 }
 
 <hr />

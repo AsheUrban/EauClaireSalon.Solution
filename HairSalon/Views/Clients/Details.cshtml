@@ -2,6 +2,7 @@
   Layout = "_Layout";
 }
 @model HairSalon.Models.Client
+
 <h2>Client Details:</h2>
 <hr />
 @Html.DisplayFor(model => model.Name)
@@ -9,6 +10,24 @@
 @Html.DisplayFor(model => model.DateOfLastApp)
 @Html.DisplayFor(model => model.Notes)
 <hr />
+
+@if(@Model.JoinEntities.Count == 0)
+{
+  <p><strong>No Stylist has been assigned to this Client yet.</strong></p>
+}
+else
+{
+  <p><strong>Stylists assigned to Client: </strong></p>
+  <ul>
+  @foreach(var join in Model.JoinEntities)
+  {
+    <li>@join.Stylist.Name</li>
+  }
+  </ul>
+}
+
+<hr />
+<p class="fancyBtn">@Html.ActionLink("Add a Stylist", "AddStylist", new { id = Model.ClientId })</p>
 <p class="fancyBtn">@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
 <p class="fancyBtn">@Html.ActionLink("Back to Stylists", "Index", "Stylists")</p>
 
