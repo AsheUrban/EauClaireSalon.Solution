@@ -53,11 +53,14 @@ _Main Project Folder:_ HairSalon
 
 _NOTE:_ [first_last] should be replaced with your own database name and [password] should be replaced by your password. Do not include square brackets in final configuration.
 
+* _Use dotnet watch run to run web application continuously while editing and dotnet run to launch the current itteration without the ability to make live changes._
+
+* _dotnet ef migrations add DatabaseUpdateName to scaffold database and each time classes or properties are modified._
+* _dotnet ef database update to push changes to database after each migration._
+
 ## Known Bugs
 
 * _Currently all properties aside from id are being pulled in as strings. Ideally, Date would use a date type and contact information would specifically be changed to phone number also with appropriate corresponding type._
-* _There is a test branch called searchfunction that has WIP regarding a search function._
-* _Incomplete commit history. first repository was deleted and project restarted around 9:30am._
 
 ## License
 
