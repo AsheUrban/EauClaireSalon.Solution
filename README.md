@@ -43,7 +43,7 @@ _Main Project Folder:_ HairSalon
 ## Setup/Installation Requirements
 
 * _Clone or download responsitory to your local._
-* _Cd into .\Factory and run dotnet restore to confirm the project has no errors._
+* _Cd into ./HairSalon
 * _Switch to many-to-many branch_
   ```
   git checkout many-to-many
@@ -61,8 +61,17 @@ _Main Project Folder:_ HairSalon
 * _Start localhost in MySQL_
 * _Build database:_
   ```
+  dotnet restore
+  ```
+  ```
+  dotnet build
+  ```
+* _Populate database:_
+  ```
   dotnet ef migrations add Initial 
   ```
+    * _Optionally use .sql files provided to build schema quickly with out the need for EF migrations.
+
   ```
   dotnet ef database update 
   ```
