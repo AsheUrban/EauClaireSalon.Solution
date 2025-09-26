@@ -43,19 +43,43 @@ _Main Project Folder:_ HairSalon
 ## Setup/Installation Requirements
 
 * _Clone or download responsitory to your local._
-* _Cd into HairSalon and run dotnet restore, dotnet build, and dotnet run to run web application._
+* _Cd into .\Factory and run dotnet restore to confirm the project has no errors._
+* _Switch to many-to-many branch_
+  ```
+  git checkout many-to-many
+  ```
 * _Touch appsettings.json and add the following configuration:_
-
-{
-  "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database=[first_last];uid=root;pwd=[password];"
+  ```
+  {
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=localhost;Port=3306;database=[first_last];uid=[yours];pwd=[password];"
+    }
   }
-}
+  ```
+  _NOTE:_ [first_last] [yours] [password] should all be replaced by your MySql access details. Do not include square brackets in final configuration.
 
-_NOTE:_ [first_last] should be replaced with your own database name and [password] should be replaced by your password. Do not include square brackets in final configuration.
+* _Start localhost in MySQL_
+* _Build database:_
+  ```
+  dotnet ef migrations add Initial 
+  ```
+  ```
+  dotnet ef database update 
+  ```
+* _Then use the following to run web application:_
+   ```
+   dotnet run OR dotnet watch run
+   ```
+* _Navigate to the localhost from your browser and explore the project!_
+* _If you are seeing an error that tables cannot befound, there are missing or more than one DbContexts, or there are unresolvable errors related to the database use:_
+  ```
+  dotnet ef database drop -f --context HairSalonContext
+  ```
+* _Then delete your migrations folder and everything in it, then rerun intial migrations and database update using dotnet as outlined above._
 
 ## Known Bugs
 
+* _Stylists cannot currently be edited, button-click triggers an "Are you lost?" page._
 * _Currently all properties aside from id are being pulled in as strings. Ideally, Date would use a date type and contact information would specifically be changed to phone number also with appropriate corresponding type._
 * _There is a test branch called searchfunction that has WIP regarding a search function._
 * _Incomplete commit history. first repository was deleted and project restarted around 9:30am._
