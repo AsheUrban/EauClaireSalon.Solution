@@ -78,8 +78,22 @@ namespace HairSalon.Controllers
     [HttpPost]
     public ActionResult ShowSearch(string searchName)
     {
-      List<Client> model = _db.Clients.Where(p => p.Name.ToLower());
-      return View("Idex", model);
+      //WIPPPPPP
+      var model = string.IsNullOrWhiteSpace(searchName) // Don't want to use VAR
+    ? _db.Clients
+        .OrderBy(c => c.Name)
+        .ToList()
+    : _db.Clients
+        .Where(c => EF.Functions.Like(c.Name, $"%{searchName}%"))
+        .OrderBy(c => c.Name)
+        .ToList();
+
+      // Return the Clients Index view explicitly
+      return View("~/Views/Clients/Index.cshtml", model);
+    
+
+      // List<Client> model = _db.Clients.Where(p => p.Name.ToLower());
+      // return View("Idex", model);
     }
   }
 }

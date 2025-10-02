@@ -1,4 +1,7 @@
-@model IEnumerable<Entity_Framework_Stored_Proc_MVC.Stylist>
+@* @model IEnumerable<Entity_Framework_Stored_Proc_MVC.Stylist> *@
+@using HairSalon.Models;
+
+@model IEnumerable<HairSalon.Models.Stylist>
  
 @{
     Layout = null;
@@ -12,7 +15,7 @@
     <title>Eau Claire's</title>
 </head>
 <body>
-    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    @using (Html.BeginForm("Index", "Home", "Stylist", FormMethod.Post))
     {
         <span>Stylist Name:</span> @Html.TextBox("Name")
         <input type="submit" value="Search"/>
