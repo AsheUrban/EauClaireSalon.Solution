@@ -1,6 +1,6 @@
-Eau Claire's Hair Salon Database Solution!
+# Eau Claire's Hair Salon Database Solution!
 
-#### A website that allows Eau Claire Managers to track their Stylists and Clients!
+A website that allows Eau Claire Managers to track their Stylists and Clients!
 
 #### By Ashe Urban
 

@@ -2,6 +2,7 @@
   Layout = "_Layout";
 }
 @model HairSalon.Models.Client
+
 <h2>EDIT CLIENT |  @Html.DisplayFor(model => model.Name)</h2>
 <hr />
 @using (Html.BeginForm())
@@ -11,7 +12,8 @@
   @Html.TextBoxFor(model => model.Name) <span> | </span> 
   @Html.LabelFor(model => model.ContactInfo) <span> | </span> 
   @Html.EditorFor(model => model.ContactInfo) <span> | </span> 
-  @Html.LabelFor(model => model.Stylist) <span> | </span> 
+
+  @Html.Label("Select Stylist: ") <span> | </span> 
   @Html.DropDownList("StylistId") <span> | </span> 
   <br>
   <span> | </span> @Html.LabelFor(model => model.DateOfLastApp) <span> | </span>
