@@ -45,9 +45,9 @@ _Main Project Folder:_ HairSalon
 
 * _Clone or download responsitory to your local._
 * _Cd into ./HairSalon
-* _Switch to many-to-many branch_
+* _Switch to many_to_many branch_
   ```
-  git checkout many-to-many
+  git checkout many_to_many
   ```
 * _Touch appsettings.json and add the following configuration:_
   ```
