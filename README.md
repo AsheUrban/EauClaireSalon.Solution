@@ -84,10 +84,8 @@ _Link to assignment:_ https://epicenter.epicodus.com/courses/968/code_reviews/58
 
 ## License
 
-* MIT
+* _Educational Use Only — This repository is provided for classroom and personal learning purposes. It is not licensed for public deployment, redistribution, or commercial use. No warranty or support is provided._
 
-## Contact Information
-
-_Please contact me with any questions or contribuitions, ashe@goldentongue.com_
+## 
 
 Copyright(c) July 2022 Ashe Urban
