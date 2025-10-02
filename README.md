@@ -4,9 +4,8 @@ A website that allows Eau Claire Managers to track their Stylists and Clients!
 
 #### By Ashe Urban
 
-_This project contains several branches, each with their own README.md and set up instructions:_
+_This project contains two branches, each with their own README.md and set up instructions:_
 * main
-* many_to_many 
 * searchfunction (WIP)
 
 ## Technologies Used on main branch
@@ -32,23 +31,12 @@ _Here's the challenge:_ build a C# web application to help Eau Claire manage sty
 
 _Link to assignment:_ https://epicenter.epicodus.com/courses/968/code_reviews/5860
 
-### Eau Claire's Hair Salon
-
-_You must follow the naming conventions for your project. Projects that do not follow these conventions will not be reviewed and will be returned not passing._
-
-_Use your first name and last name to name your database in the following way:_
-
-_Production Database:_ first_last
-_Main Project Folder:_ HairSalon
 
 ## Setup/Installation Requirements
 
 * _Clone or download responsitory to your local._
 * _Cd into ./HairSalon
-* _Switch to many_to_many branch_
-  ```
-  git checkout many_to_many
-  ```
+
 * _Touch appsettings.json and add the following configuration:_
   ```
   {
