@@ -1,11 +1,12 @@
-# Week 10 Independent Project: Eau Claire's Hair Salon Database Solution! | main
+Eau Claire's Hair Salon Database Solution!
 
 #### A website that allows Eau Claire Managers to track their Stylists and Clients!
 
 #### By Ashe Urban
 
 _This project contains several branches, each with their own README.md and set up instructions:_
-* many_to_many (Co Authored)
+* main
+* many_to_many 
 * searchfunction (WIP)
 
 ## Technologies Used on main branch
