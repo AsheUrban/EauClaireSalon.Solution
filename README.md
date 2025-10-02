@@ -1,10 +1,15 @@
-# Week 10 Independent Project: Eau Claire's Hair Salon Database Solution!
+# Eau Claire's Hair Salon Database Solution!
 
-#### A website that allows Eau Claire Managers to track their Stylists and Clients!
+A website that allows Eau Claire Managers to track their Stylists and Clients!
 
 #### By Ashe Urban
 
-## Technologies Used
+_This project contains several branches, each with their own README.md and set up instructions:_
+* main
+* many_to_many 
+* searchfunction (WIP)
+
+## Technologies Used on main branch
 
 * _C#_
 * _CSHTML_
@@ -15,9 +20,6 @@
 * _Markdown_
 
 ## Description
-
-## NOTE: 
-_This project was updated for many-to-many relationship between stylist and client using Entity with Matt Wilkinson and Alex McKnight._
 
 _You've been referred by Pierre to his friend Claire who is the owner of a hair salon called Eau Claire's Salon. She has contracted you out to create an MVC web application to help her manage her employees (stylists) and their clients. Claire should be able to add a list of stylists working at the salon, and for each stylist, add clients who see that stylist. The stylists have specific specialties, so each client can only see (belong to) a single stylist._
 
@@ -42,25 +44,55 @@ _Main Project Folder:_ HairSalon
 ## Setup/Installation Requirements
 
 * _Clone or download responsitory to your local._
-* _Cd into HairSalon and run dotnet restore, dotnet build, and dotnet run to run web application._
+* _Cd into ./HairSalon
+* _Switch to many_to_many branch_
+  ```
+  git checkout many_to_many
+  ```
 * _Touch appsettings.json and add the following configuration:_
-
-{
-  "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database=[first_last];uid=root;pwd=[password];"
+  ```
+  {
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=localhost;Port=3306;database=[first_last];uid=[yours];pwd=[password];"
+    }
   }
-}
+  ```
+  _NOTE:_ [first_last] [yours] [password] should all be replaced by your MySql access details. Do not include square brackets in final configuration.
 
-_NOTE:_ [first_last] should be replaced with your own database name and [password] should be replaced by your password. Do not include square brackets in final configuration.
+* _Start localhost in MySQL_
+* _Build database:_
+  ```
+  dotnet restore
+  ```
+  ```
+  dotnet build
+  ```
+* _Populate database:_
+  ```
+  dotnet ef migrations add Initial 
+  ```
+    * _Optionally use .sql files provided to build schema quickly with out the need for EF migrations.
 
-* _Use dotnet watch run to run web application continuously while editing and dotnet run to launch the current itteration without the ability to make live changes._
-
-* _dotnet ef migrations add DatabaseUpdateName to scaffold database and each time classes or properties are modified._
-* _dotnet ef database update to push changes to database after each migration._
+  ```
+  dotnet ef database update 
+  ```
+* _Then use the following to run web application:_
+   ```
+   dotnet run OR dotnet watch run
+   ```
+* _Navigate to the localhost from your browser and explore the project!_
+* _If you are seeing an error that tables cannot befound, there are missing or more than one DbContexts, or there are unresolvable errors related to the database use:_
+  ```
+  dotnet ef database drop -f --context HairSalonContext
+  ```
+* _Then delete your migrations folder and everything in it, then rerun intial migrations and database update using dotnet as outlined above._
 
 ## Known Bugs
 
+* _Stylists cannot currently be edited, button-click triggers an "Are you lost?" page._
 * _Currently all properties aside from id are being pulled in as strings. Ideally, Date would use a date type and contact information would specifically be changed to phone number also with appropriate corresponding type._
+* _There is a test branch called searchfunction that has WIP regarding a search function._
+* _Incomplete commit history. first repository was deleted and project restarted around 9:30am._
 
 ## License
 
